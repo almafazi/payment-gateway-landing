@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Money Transfer and Online Payments</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/plugin/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/plugin/slick.css">
+    <link rel="stylesheet" href="assets/css/arafat-font.css">
+    <link rel="stylesheet" href="assets/css/plugin/animate.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .nav-pills .nav-link {
+            border-radius: 0;
+        }
+
+        .nav-pills .nav-item {
+            width: 50%;
+        }
+
+        .nav-pills .nav-link {
+            width: 100%;
+        }
+
+        .nav-pills .nav-link {
+            color: var(--primary-color);
+        }
+
+        .nav-pills .nav-link.active, #submitButton {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .form-floating select {
+            display: block!important;
+        }
+
+        input {
+            padding: 10px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- start preloader -->
+    <div class="preloader" id="preloader"></div>
+    <!-- end preloader -->
+
+    <!-- Scroll To Top Start-->
+    <a href="javascript:void(0)" class="scrollToTop"><i class="fas fa-angle-double-up"></i></a>
+    <!-- Scroll To Top End -->
+
+    <!-- header-section start -->
+    <header class="header-section">
+        <div class="overlay">
+            <div class="container">
+                <div class="row d-flex header-area">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR68cgQT_BTgnhWTdfjUXSN8zM9Vpxgq82dhw&usqp=CAU" class="logo" width="150" alt="logo">
+                        </a>
+                        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbar-content">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center" id="navbar-content">
+                            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                                <li class="nav-item main-navbar">
+                                    <a class="nav-link" href="coins.html">Supported Coins</a>
+                                </li>
+                                <li class="nav-item main-navbar">
+                                    <a class="nav-link" href="merchant-tools.html">Merchant Tools</a>
+                                </li>
+                                <li class="nav-item main-navbar">
+                                    <a class="nav-link" href="help-center.html">Help Center</a>
+                                </li>
+                                <!-- <li class="nav-item main-navbar">
+                                    <a class="nav-link" href="help-center.html">Fees</a>
+                                </li> -->
+                            </ul>
+                            <div class="right-area header-action d-flex align-items-center max-un">
+                                <a href="login.html" class="login">Login</a>
+                                <a href="sign-up.html" class="cmn-btn">Sign Up
+                                    <i class="icon-d-right-arrow-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-section end -->
+
+    <!-- Login Reg start -->
+    <section class="login-reg mt-3">
+        <div class="overlay pt-120 pb-120">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="section-text text-center">
+                            <h4 class="title">Register to CoinPayments</h4>
+                        </div>
+                        <form action="sign-up.html#">
+                            <div class="row">
+                                <div class="col-12">
+                                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Personal</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Business</button>
+                                        </li>
+                                      </ul>
+                                      <div class="tab-content" id="pills-tabContent">
+                                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                            <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                                                <div class="form-floating mb-3">
+                                                    <input class="form-control" id="username" type="text" placeholder="Username" data-sb-validations="required" />
+                                                    <label for="username">Username</label>
+                                                    <div class="invalid-feedback" data-sb-feedback="username:required">Username is required.</div>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <input class="form-control" id="firstName" type="text" placeholder="First Name" data-sb-validations="required" />
+                                                    <label for="firstName">First Name</label>
+                                                    <div class="invalid-feedback" data-sb-feedback="firstName:required">First Name is required.</div>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <input class="form-control" id="lastName" type="text" placeholder="Last Name" data-sb-validations="required" />
+                                                    <label for="lastName">Last Name</label>
+                                                    <div class="invalid-feedback" data-sb-feedback="lastName:required">Last Name is required.</div>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
+                                                    <label for="emailAddress">Email Address</label>
+                                                    <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+                                                    <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <input class="form-control" id="confirmEmail" type="email" placeholder="Confirm Email" data-sb-validations="required,email" />
+                                                    <label for="confirmEmail">Confirm Email</label>
+                                                    <div class="invalid-feedback" data-sb-feedback="confirmEmail:required">Confirm Email is required.</div>
+                                                    <div class="invalid-feedback" data-sb-feedback="confirmEmail:email">Confirm Email Email is not valid.</div>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <input class="form-control" id="password" type="text" placeholder="Password" data-sb-validations="required" />
+                                                    <label for="password">Password</label>
+                                                    <div class="invalid-feedback" data-sb-feedback="password:required">Password is required.</div>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <input class="form-control" id="confirmPassword" type="text" placeholder="Confirm Password" data-sb-validations="required" />
+                                                    <label for="confirmPassword">Confirm Password</label>
+                                                    <div class="invalid-feedback" data-sb-feedback="confirmPassword:required">Confirm Password is required.</div>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <select class="form-select" id="countryOfResidence" aria-label="Country Of Residence">
+                                                        <option value="America">America</option>
+                                                    </select>
+                                                    <label for="countryOfResidence">Country Of Residence</label>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <select class="form-select" id="stateOfResidenceUsaOnly" aria-label="State of Residence (USA only)">
+                                                        <option value="Not Applicable">Not Applicable</option>
+                                                    </select>
+                                                    <label for="stateOfResidenceUsaOnly">State of Residence (USA only)</label>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <select class="form-select" id="timezoneSelectAnyCityWithTheSameTimeAsYours" aria-label="Timezone">
+                                                        <option value="Jakarta/Asia">Jakarta/Asia</option>
+                                                    </select>
+                                                    <label for="timezoneSelectAnyCityWithTheSameTimeAsYours">Timezone</label>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label d-block">By clicking register below, I certify that:</label>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" id="iAmTheAgeOfMajorityInMyCountryOfResidenceAndIHaveReadUnderstandAndAgreeToTheTermsOfTheUserAgreementAndPrivacyPolicy" type="checkbox" name="byClickingRegisterBelowICertifyThat" data-sb-validations="" />
+                                                        <label class="form-check-label" for="iAmTheAgeOfMajorityInMyCountryOfResidenceAndIHaveReadUnderstandAndAgreeToTheTermsOfTheUserAgreementAndPrivacyPolicy">I am the age of majority in my country of residence and I have read understand and agree to the terms of the User Agreement and Privacy Policy.</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" id="agreeToReceiveElectronicCommunicationsFromCoinPaymentsInc" type="checkbox" name="byClickingRegisterBelowICertifyThat" data-sb-validations="" />
+                                                        <label class="form-check-label" for="agreeToReceiveElectronicCommunicationsFromCoinPaymentsInc">agree to receive electronic communications from CoinPayments Inc</label>
+                                                    </div>
+                                                </div>
+                                                <div class="d-none" id="submitSuccessMessage">
+                                                    <div class="text-center mb-3">
+                                                        <div class="fw-bolder">Form submission successful!</div>
+                                                        <p>To activate this form, sign up at</p>
+                                                        <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                                    </div>
+                                                </div>
+                                                <div class="d-none" id="submitErrorMessage">
+                                                    <div class="text-center text-danger mb-3">Error sending message!</div>
+                                                </div>
+                                                <div class="d-grid">
+                                                    <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Submit</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                            <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                                                <div class="form-floating mb-3">
+                                                    <input class="form-control" id="username" type="text" placeholder="Username" data-sb-validations="required" />
+                                                    <label for="username">Username</label>
+                                                    <div class="invalid-feedback" data-sb-feedback="username:required">Username is required.</div>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <input class="form-control" id="firstName" type="text" placeholder="First Name" data-sb-validations="required" />
+                                                    <label for="firstName">First Name</label>
+                                                    <div class="invalid-feedback" data-sb-feedback="firstName:required">First Name is required.</div>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <input class="form-control" id="lastName" type="text" placeholder="Last Name" data-sb-validations="required" />
+                                                    <label for="lastName">Last Name</label>
+                                                    <div class="invalid-feedback" data-sb-feedback="lastName:required">Last Name is required.</div>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
+                                                    <label for="emailAddress">Email Address</label>
+                                                    <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+                                                    <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <input class="form-control" id="confirmEmail" type="email" placeholder="Confirm Email" data-sb-validations="required,email" />
+                                                    <label for="confirmEmail">Confirm Email</label>
+                                                    <div class="invalid-feedback" data-sb-feedback="confirmEmail:required">Confirm Email is required.</div>
+                                                    <div class="invalid-feedback" data-sb-feedback="confirmEmail:email">Confirm Email Email is not valid.</div>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <input class="form-control" id="password" type="text" placeholder="Password" data-sb-validations="required" />
+                                                    <label for="password">Password</label>
+                                                    <div class="invalid-feedback" data-sb-feedback="password:required">Password is required.</div>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <input class="form-control" id="confirmPassword" type="text" placeholder="Confirm Password" data-sb-validations="required" />
+                                                    <label for="confirmPassword">Confirm Password</label>
+                                                    <div class="invalid-feedback" data-sb-feedback="confirmPassword:required">Confirm Password is required.</div>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <select class="form-select" id="countryOfResidence" aria-label="Country Of Residence">
+                                                        <option value="America">America</option>
+                                                    </select>
+                                                    <label for="countryOfResidence">Country Of Residence</label>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <select class="form-select" id="stateOfResidenceUsaOnly" aria-label="State of Residence (USA only)">
+                                                        <option value="Not Applicable">Not Applicable</option>
+                                                    </select>
+                                                    <label for="stateOfResidenceUsaOnly">State of Residence (USA only)</label>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <select class="form-select" id="timezoneSelectAnyCityWithTheSameTimeAsYours" aria-label="Timezone - (Select any city with the same time as yours)">
+                                                        <option value="Jakarta/Asia">Jakarta/Asia</option>
+                                                    </select>
+                                                    <label for="timezoneSelectAnyCityWithTheSameTimeAsYours">Timezone - (Select any city with the same time as yours)</label>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label d-block">By clicking register below, I certify that:</label>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" id="iAmTheAgeOfMajorityInMyCountryOfResidenceAndIHaveReadUnderstandAndAgreeToTheTermsOfTheUserAgreementAndPrivacyPolicy" type="checkbox" name="byClickingRegisterBelowICertifyThat" data-sb-validations="" />
+                                                        <label class="form-check-label" for="iAmTheAgeOfMajorityInMyCountryOfResidenceAndIHaveReadUnderstandAndAgreeToTheTermsOfTheUserAgreementAndPrivacyPolicy">I am the age of majority in my country of residence and I have read understand and agree to the terms of the User Agreement and Privacy Policy.</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" id="agreeToReceiveElectronicCommunicationsFromCoinPaymentsInc" type="checkbox" name="byClickingRegisterBelowICertifyThat" data-sb-validations="" />
+                                                        <label class="form-check-label" for="agreeToReceiveElectronicCommunicationsFromCoinPaymentsInc">agree to receive electronic communications from CoinPayments Inc</label>
+                                                    </div>
+                                                </div>
+                                                <div class="d-none" id="submitSuccessMessage">
+                                                    <div class="text-center mb-3">
+                                                        <div class="fw-bolder">Form submission successful!</div>
+                                                        <p>To activate this form, sign up at</p>
+                                                        <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                                    </div>
+                                                </div>
+                                                <div class="d-none" id="submitErrorMessage">
+                                                    <div class="text-center text-danger mb-3">Error sending message!</div>
+                                                </div>
+                                                <div class="d-grid">
+                                                    <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Submit</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="section-text text-center">
+                            <span class="or">Or Continue With</span>
+                            <div class="reg-google mb-2">
+                                <a href="javascript:void(0)"><i class="fab fa-google"></i>Sign up with Google</a>
+                            </div>
+                            <p class="dont-acc">Already have an account? <a href="login.html">Login</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Login Reg end -->
+
+    <!--==================================================================-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/fontawesome.js"></script>
+    <script src="assets/js/plugin/slick.js"></script>
+    <script src="assets/js/plugin/counter.js"></script>
+    <script src="assets/js/plugin/waypoint.min.js"></script>
+    <script src="assets/js/plugin/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/plugin/wow.min.js"></script>
+    <script src="assets/js/plugin/plugin.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
